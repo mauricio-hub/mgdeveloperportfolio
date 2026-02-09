@@ -45,5 +45,6 @@ Context.md
 Style.md
 estilo.webp
 *.pdf
+!public/*.pdf
 /docs/
 

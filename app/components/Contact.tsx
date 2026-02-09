@@ -79,7 +79,8 @@ export default function Contact() {
         <RevealItem delay={0.5}>
           <div className="mt-12">
             <a
-              href={`mailto:${personal.email}`}
+              href="/MauricioGonzález–CV.pdf"
+              download
               className="inline-flex items-center border border-text-primary bg-text-primary px-8 py-4 text-sm font-medium uppercase tracking-wider text-bg-primary transition-opacity hover:opacity-80"
             >
               {t.contact.cta}

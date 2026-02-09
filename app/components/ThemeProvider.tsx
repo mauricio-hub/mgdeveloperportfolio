@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useContext, useEffect, useRef, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useSyncExternalStore,
+} from "react";
 
 type Theme = "light" | "dark";
 
@@ -18,12 +24,30 @@ export function useTheme() {
   return useContext(ThemeContext);
 }
 
-function getInitialTheme(): Theme {
-  if (typeof window === "undefined") return "light";
-  const saved = localStorage.getItem("theme") as Theme | null;
-  if (saved) return saved;
+/* ── localStorage as external store ── */
+let themeListeners: Array<() => void> = [];
+
+function subscribeTheme(cb: () => void) {
+  themeListeners = [...themeListeners, cb];
+  return () => {
+    themeListeners = themeListeners.filter((l) => l !== cb);
+  };
+}
+
+function getThemeSnapshot(): Theme {
+  const saved = localStorage.getItem("theme");
+  if (saved === "light" || saved === "dark") return saved;
   if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
   return "light";
+}
+
+function getThemeServerSnapshot(): Theme {
+  return "light";
+}
+
+function writeTheme(next: Theme) {
+  localStorage.setItem("theme", next);
+  themeListeners.forEach((l) => l());
 }
 
 export default function ThemeProvider({
@@ -31,26 +55,21 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
-  const mounted = useRef(false);
+  const theme = useSyncExternalStore(
+    subscribeTheme,
+    getThemeSnapshot,
+    getThemeServerSnapshot
+  );
 
-  useEffect(() => {
-    mounted.current = true;
-  }, []);
-
+  // Sync DOM class with theme
   useEffect(() => {
     const root = document.documentElement;
-    if (theme === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-    localStorage.setItem("theme", theme);
+    root.classList.toggle("dark", theme === "dark");
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  };
+  const toggleTheme = useCallback(() => {
+    writeTheme(theme === "light" ? "dark" : "light");
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

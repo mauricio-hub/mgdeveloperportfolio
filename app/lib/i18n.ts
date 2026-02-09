@@ -69,7 +69,7 @@ const translations = {
     contact: {
       title: "CONTACT",
       subtitle: "ME",
-      cta: "Let's build something →",
+      cta: "Download CV →",
       links: "Links",
       info: "Info",
     },
@@ -145,7 +145,7 @@ const translations = {
     contact: {
       title: "CONTACTO",
       subtitle: "",
-      cta: "Construyamos algo juntos →",
+      cta: "Descargar CV →",
       links: "Enlaces",
       info: "Información",
     },

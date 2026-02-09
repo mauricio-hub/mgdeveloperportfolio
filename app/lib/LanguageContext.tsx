@@ -1,6 +1,11 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useSyncExternalStore,
+} from "react";
 import { type Lang, type Translations, getTranslations } from "./i18n";
 
 interface LanguageContextType {
@@ -19,27 +24,45 @@ export function useLang() {
   return useContext(LanguageContext);
 }
 
+/* ── localStorage as external store ── */
+let langListeners: Array<() => void> = [];
+
+function subscribeLang(cb: () => void) {
+  langListeners = [...langListeners, cb];
+  return () => {
+    langListeners = langListeners.filter((l) => l !== cb);
+  };
+}
+
+function getLangSnapshot(): Lang {
+  const saved = localStorage.getItem("lang");
+  if (saved === "en" || saved === "es") return saved;
+  return "en";
+}
+
+function getLangServerSnapshot(): Lang {
+  return "en";
+}
+
+function writeLang(next: Lang) {
+  localStorage.setItem("lang", next);
+  langListeners.forEach((l) => l());
+}
+
 export default function LanguageProvider({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [lang, setLang] = useState<Lang>("en");
+  const lang = useSyncExternalStore(
+    subscribeLang,
+    getLangSnapshot,
+    getLangServerSnapshot
+  );
 
-  useEffect(() => {
-    const saved = localStorage.getItem("lang") as Lang | null;
-    if (saved && (saved === "en" || saved === "es")) {
-      setLang(saved);
-    }
-  }, []);
-
-  const toggleLang = () => {
-    setLang((prev) => {
-      const next = prev === "en" ? "es" : "en";
-      localStorage.setItem("lang", next);
-      return next;
-    });
-  };
+  const toggleLang = useCallback(() => {
+    writeLang(lang === "en" ? "es" : "en");
+  }, [lang]);
 
   const t = getTranslations(lang);
 
