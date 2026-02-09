@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# project docs & assets (not for repo)
+Context.md
+Style.md
+estilo.webp
+*.pdf
+/docs/
+
