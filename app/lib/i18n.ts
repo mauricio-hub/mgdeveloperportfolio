@@ -95,21 +95,21 @@ const translations = {
       cta2: "Contáctame",
     },
     about: {
-      marquee: "SOBRE MÍ",
-      title: "SOBRE",
-      subtitle: "MÍ",
+      marquee: "ABOUT ME",
+      title: "ABOUT",
+      subtitle: "ME",
       p1: "Soy un desarrollador full-stack que construye aplicaciones web empresariales que resuelven problemas reales. Durante más de 4 años, me he enfocado en el sector energético — creando plataformas con analítica potenciada por IA, procesamiento de datos en tiempo real y arquitecturas escalables.",
       p2: "Trabajo en todo el stack: desde diseñar interfaces limpias e intuitivas con React y TypeScript, hasta construir APIs robustas con Python y Django. Me importa escribir código mantenible, pensar en UX desde el inicio y entregar funcionalidades que realmente importen a los usuarios.",
     },
     experience: {
-      marquee: "EXPERIENCIA",
-      title: "EXPERIENCIA",
-      subtitle: "LÍNEA DE TIEMPO",
+      marquee: "EXPERIENCE",
+      title: "EXPERIENCE",
+      subtitle: "TIMELINE",
     },
     projects: {
-      marquee: "MI TRABAJO",
-      title: "PROYECTOS",
-      subtitle: "CASOS DE ESTUDIO",
+      marquee: "MY WORK",
+      title: "PROJECTS",
+      subtitle: "CASE STUDIES",
       problem: "Problema",
       role: "Mi Rol",
       result: "Resultado",
@@ -117,12 +117,12 @@ const translations = {
     exercises: {
       marquee: "PLAYGROUND",
       title: "PLAYGROUND",
-      subtitle: "PROYECTOS PROPIOS",
+      subtitle: "SIDE PROJECTS",
     },
     skills: {
-      marquee: "LO QUE CONSTRUYO",
-      title: "LO QUE",
-      subtitle: "CONSTRUYO",
+      marquee: "WHAT I BUILD",
+      title: "WHAT I",
+      subtitle: "BUILD",
       blocks: [
         {
           title: "Plataformas & Dashboards",
@@ -143,8 +143,8 @@ const translations = {
       ],
     },
     contact: {
-      title: "CONTACTO",
-      subtitle: "",
+      title: "CONTACT",
+      subtitle: "ME",
       cta: "Descargar CV →",
       links: "Enlaces",
       info: "Información",
