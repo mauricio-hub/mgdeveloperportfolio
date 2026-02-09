@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "./ThemeProvider";
 import { useLang } from "../lib/LanguageContext";
@@ -9,6 +9,9 @@ export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const { lang, t, toggleLang } = useLang();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
 
   const links = [
     { href: "#about", label: t.nav.about },
@@ -66,7 +69,7 @@ export default function Navbar() {
             className="rounded border border-border p-2 text-text-secondary transition-colors hover:text-text-primary"
             aria-label="Toggle theme"
           >
-            {theme === "light" ? (
+            {!mounted || theme === "light" ? (
               <svg
                 width="16"
                 height="16"

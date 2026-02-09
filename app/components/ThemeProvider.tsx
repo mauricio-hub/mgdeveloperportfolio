@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 type Theme = "light" | "dark";
 
@@ -18,26 +18,27 @@ export function useTheme() {
   return useContext(ThemeContext);
 }
 
+function getInitialTheme(): Theme {
+  if (typeof window === "undefined") return "light";
+  const saved = localStorage.getItem("theme") as Theme | null;
+  if (saved) return saved;
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
+  return "light";
+}
+
 export default function ThemeProvider({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [theme, setTheme] = useState<Theme>("light");
-  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const mounted = useRef(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem("theme") as Theme | null;
-    if (saved) {
-      setTheme(saved);
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-    }
-    setMounted(true);
+    mounted.current = true;
   }, []);
 
   useEffect(() => {
-    if (!mounted) return;
     const root = document.documentElement;
     if (theme === "dark") {
       root.classList.add("dark");
@@ -45,16 +46,11 @@ export default function ThemeProvider({
       root.classList.remove("dark");
     }
     localStorage.setItem("theme", theme);
-  }, [theme, mounted]);
+  }, [theme]);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
-
-  // Prevent flash of wrong theme
-  if (!mounted) {
-    return <>{children}</>;
-  }
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
