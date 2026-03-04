@@ -87,4 +87,39 @@ export const projects: Project[] = [
       es: "Reemplazó operaciones manuales con una plataforma profesional, mejorando la incorporación de clientes y la gestión de entregas.",
     },
   },
+  {
+    id: 3,
+    title: "PDF Chat",
+    client: "RAG System",
+    description: {
+      en: "AI-powered tool that lets property managers query lease contracts instantly — no manual searching required.",
+      es: "Herramienta con IA que permite a administradores de propiedades consultar contratos de arrendamiento al instante, sin búsqueda manual.",
+    },
+    problem: {
+      en: "Property managers with dozens of active contracts wasted hours searching for specific clauses, dates, or tenant data across PDF files.",
+      es: "Administradores con decenas de contratos activos perdían horas buscando cláusulas, fechas o datos de arrendatarios en archivos PDF.",
+    },
+    role: {
+      en: "Full-Stack Developer — RAG pipeline design, PDF ingestion, vector search, and conversational interface.",
+      es: "Desarrollador Full-Stack — Diseño del pipeline RAG, ingesta de PDFs, búsqueda vectorial e interfaz conversacional.",
+    },
+    stack: [
+      "Python",
+      "LangChain",
+      "OpenAI",
+      "FAISS",
+      "FastAPI",
+      "React",
+      "TypeScript",
+    ],
+    images: [
+      "/images/rag/ChatGPT Image Mar 3, 2026, 08_26_59 PM.png",
+      "/images/rag/WhatsApp Image 2026-03-03 at 8.21.49 PM.jpeg",
+      "/images/rag/WhatsApp Image 2026-03-03 at 8.23.55 PM.jpeg",
+    ],
+    result: {
+      en: "Instant answers from any lease document. Managers query dozens of contracts in seconds instead of opening files manually.",
+      es: "Respuestas inmediatas desde cualquier contrato. Los administradores consultan decenas de documentos en segundos sin abrir archivos.",
+    },
+  },
 ];

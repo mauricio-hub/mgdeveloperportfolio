@@ -28,10 +28,18 @@ export default function Projects() {
           </RevealItem>
         </div>
 
-        {/* Project grid — 2 columns on desktop */}
+        {/* Project grid — 2 columns on desktop, last odd item spans full width */}
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project, i) => (
-            <RevealItem key={project.id} delay={0.3 + i * 0.1}>
+            <RevealItem
+              key={project.id}
+              delay={0.3 + i * 0.1}
+              className={
+                i === projects.length - 1 && projects.length % 2 !== 0
+                  ? "md:col-span-2"
+                  : ""
+              }
+            >
               <ProjectCard project={project} />
             </RevealItem>
           ))}
