@@ -22,7 +22,7 @@ const translations = {
       marquee: "ABOUT ME",
       title: "ABOUT",
       subtitle: "ME",
-      p1: "I'm a full-stack developer who builds enterprise web applications that solve real problems. Over the past 4+ years, I've focused on the energy sector — creating platforms with AI-powered analytics, real-time data processing, and scalable architectures.",
+      p1: "I'm a full-stack developer who builds enterprise web applications that solve real problems. Over the past 5+ years, I've focused on the energy sector — creating platforms with AI-powered analytics, real-time data processing, and scalable architectures.",
       p2: "I work across the entire stack: from designing clean, intuitive interfaces with React and TypeScript, to building robust APIs with Python and Django. I care about writing maintainable code, thinking about UX from the start, and shipping features that actually matter to users.",
     },
     experience: {
@@ -90,7 +90,7 @@ const translations = {
       title: "CONSTRUYO",
       subtitle: "PRODUCTOS.",
       summary:
-        "Convierto problemas complejos en software limpio y funcional. 4+ años entregando productos full-stack — desde plataformas energéticas hasta sistemas en tiempo real. React, TypeScript, Python, Django.",
+        "Convierto problemas complejos en software limpio y funcional. 5+ años entregando productos full-stack — desde plataformas energéticas hasta sistemas en tiempo real. React, TypeScript, Python, Django.",
       cta1: "Ver Proyectos",
       cta2: "Hablemos",
     },

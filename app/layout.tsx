@@ -24,7 +24,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mauricio González – Full-Stack Developer",
   description:
-    "Full-stack developer with 4+ years of experience building enterprise web applications. React, TypeScript, Python, Django.",
+    "Full-stack developer with 5+ years of experience building enterprise web applications. React, TypeScript, Python, Django.",
   keywords: [
     "Full-Stack Developer",
     "React",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mauricio González – Full-Stack Developer",
     description:
-      "Full-stack developer with 4+ years of experience building enterprise web applications.",
+      "Full-stack developer with 5+ years of experience building enterprise web applications.",
     type: "website",
     locale: "en_US",
   },
