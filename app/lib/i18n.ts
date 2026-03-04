@@ -11,12 +11,12 @@ const translations = {
     },
     hero: {
       greeting: "Hi, I'm",
-      title: "FULL-STACK",
-      subtitle: "DEVELOPER",
+      title: "BUILDING",
+      subtitle: "PRODUCTS.",
       summary:
-        "Full-stack developer with 4+ years of experience building enterprise web applications, mainly for the energy sector. Strong focus on React, TypeScript, Python, and Django.",
+        "I turn complex problems into clean, functional software. 5+ years shipping full-stack products — from energy platforms to real-time systems. React, TypeScript, Python, Django.",
       cta1: "View Projects",
-      cta2: "Contact Me",
+      cta2: "Let's Talk",
     },
     about: {
       marquee: "ABOUT ME",
@@ -87,12 +87,12 @@ const translations = {
     },
     hero: {
       greeting: "Hola, soy",
-      title: "FULL-STACK",
-      subtitle: "DEVELOPER",
+      title: "CONSTRUYO",
+      subtitle: "PRODUCTOS.",
       summary:
-        "Desarrollador full-stack con 4+ años de experiencia construyendo aplicaciones web empresariales, principalmente para el sector energético. Enfoque en React, TypeScript, Python y Django.",
+        "Convierto problemas complejos en software limpio y funcional. 4+ años entregando productos full-stack — desde plataformas energéticas hasta sistemas en tiempo real. React, TypeScript, Python, Django.",
       cta1: "Ver Proyectos",
-      cta2: "Contáctame",
+      cta2: "Hablemos",
     },
     about: {
       marquee: "ABOUT ME",

@@ -76,7 +76,7 @@ export default function Contact() {
         </div>
 
         {/* CTA */}
-        <RevealItem delay={0.5}>
+        {/* <RevealItem delay={0.5}>
           <div className="mt-12">
             <a
               href="/Mauricio-Gonzalez-CV.pdf"
@@ -86,7 +86,7 @@ export default function Contact() {
               {t.contact.cta}
             </a>
           </div>
-        </RevealItem>
+        </RevealItem> */}
       </div>
     </SectionReveal>
   );

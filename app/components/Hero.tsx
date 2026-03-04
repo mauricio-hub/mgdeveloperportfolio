@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import Image from "next/image";
 import { useLang } from "../lib/LanguageContext";
 import { personal } from "../data/personal";
 
@@ -70,54 +69,33 @@ export default function Hero() {
           </motion.span>
         </div>
 
-        {/* Summary + Photo area */}
-        <div className="inline-flex flex-col items-center gap-8 text-left md:flex-row md:items-end md:gap-12">
-          {/* Photo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.5 }}
-            className="relative h-56 w-44 shrink-0 overflow-hidden grayscale md:h-72 md:w-56"
-          >
-            <Image
-              src="/images/mg.png"
-              alt={personal.name}
-              fill
-              sizes="(max-width: 768px) 176px, 224px"
-              className="object-cover"
-              priority
-              unoptimized
-            />
-          </motion.div>
+        {/* Summary + CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: EASE, delay: 0.5 }}
+          className="mx-auto max-w-lg"
+        >
+          <p className="mb-8 text-base leading-relaxed text-text-secondary">
+            {t.hero.summary}
+          </p>
 
-          {/* Summary text */}
-          <motion.div
-            initial={{ opacity: 0, y }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: EASE, delay: 0.6 }}
-            className="max-w-md"
-          >
-            <p className="mb-8 text-base leading-relaxed text-text-secondary">
-              {t.hero.summary}
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <a
-                href="#projects"
-                className="inline-flex items-center justify-center border border-text-primary bg-text-primary px-6 py-3 text-sm font-medium uppercase tracking-wider text-bg-primary transition-opacity hover:opacity-80"
-              >
-                {t.hero.cta1}
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center border border-border px-6 py-3 text-sm font-medium uppercase tracking-wider text-text-primary transition-colors hover:bg-bg-secondary"
-              >
-                {t.hero.cta2}
-              </a>
-            </div>
-          </motion.div>
-        </div>
+          {/* CTAs */}
+          <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center border border-text-primary bg-text-primary px-6 py-3 text-sm font-medium uppercase tracking-wider text-bg-primary transition-opacity hover:opacity-80"
+            >
+              {t.hero.cta1}
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center border border-border px-6 py-3 text-sm font-medium uppercase tracking-wider text-text-primary transition-colors hover:bg-bg-secondary"
+            >
+              {t.hero.cta2}
+            </a>
+          </div>
+        </motion.div>
 
         {/* Scroll indicator — mouse-reactive circle */}
         <motion.a
