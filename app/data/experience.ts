@@ -13,6 +13,43 @@ export interface Experience {
 export const experience: Experience[] = [
   {
     id: 1,
+    company: "Independent Full-Stack Developer",
+    role: {
+      en: "Freelance Developer",
+      es: "Desarrollador Freelance",
+    },
+    period: "2024 – Present",
+    status: {
+      en: "Freelance",
+      es: "Freelance",
+    },
+    stack: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "Supabase",
+      "PostgreSQL",
+      "OpenAI",
+      "Docker",
+    ],
+    achievements: {
+      en: [
+        "Developing custom web applications for startups and small businesses.",
+        "Building AI-powered tools, automation workflows, and SaaS prototypes.",
+        "Working with modern stacks such as React, Next.js, TypeScript, and Python.",
+        "Integrating APIs, LLM services, and scalable backend architectures.",
+      ],
+      es: [
+        "Desarrollo de aplicaciones web a medida para startups y pequeñas empresas.",
+        "Construcción de herramientas con IA, flujos de automatización y prototipos SaaS.",
+        "Trabajo con stacks modernos como React, Next.js, TypeScript y Python.",
+        "Integración de APIs, servicios LLM y arquitecturas backend escalables.",
+      ],
+    },
+  },
+  {
+    id: 3,
     company: "Enersinc SAS",
     role: {
       en: "Software Developer",
@@ -50,7 +87,7 @@ export const experience: Experience[] = [
     },
   },
   {
-    id: 2,
+    id: 4,
     company: "Guepardos",
     role: {
       en: "Full-Stack Developer",
