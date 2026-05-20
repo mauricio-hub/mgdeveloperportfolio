@@ -31,15 +31,33 @@ export default function ExperienceItem({
 
         {/* Company + Role */}
         <div className="flex-1">
-          <h3 className="font-heading text-lg font-bold uppercase tracking-wider text-text-primary md:text-xl">
-            {experience.company}
-          </h3>
+          <div className="flex items-baseline gap-3">
+            <h3 className="font-heading text-lg font-bold uppercase tracking-wider text-text-primary md:text-xl">
+              {experience.company}
+            </h3>
+            {experience.url && (
+              <a
+                href={experience.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="font-mono text-[10px] text-text-secondary/40 hover:text-accent transition-colors"
+              >
+                ↗
+              </a>
+            )}
+          </div>
           <p className="text-sm text-text-secondary">
             {experience.role[lang]} · {experience.period}
             {experience.status[lang] && (
               <span className="ml-2 text-accent">({experience.status[lang]})</span>
             )}
           </p>
+          {experience.highlight && (
+            <p className="mt-1 text-xs text-text-secondary/60 italic">
+              {experience.highlight[lang]}
+            </p>
+          )}
         </div>
 
         {/* Toggle icon */}

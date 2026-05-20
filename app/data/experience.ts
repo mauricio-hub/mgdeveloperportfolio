@@ -3,22 +3,76 @@ import type { Lang } from "../lib/i18n";
 export interface Experience {
   id: number;
   company: string;
+  url?: string;
   role: Record<Lang, string>;
   period: string;
   status: Record<Lang, string>;
   stack: string[];
   achievements: Record<Lang, string[]>;
+  highlight?: Record<Lang, string>;
 }
 
 export const experience: Experience[] = [
   {
-    id: 1,
-    company: "Independent Full-Stack Developer",
-    role: {
-      en: "Freelance Developer",
-      es: "Desarrollador Freelance",
+    id: 5,
+    company: "Dropanalizer",
+    url: "https://dropanalizer.com/",
+    highlight: {
+      en: "My own SaaS — built solo from idea to production.",
+      es: "Mi propio SaaS — construido solo desde la idea hasta producción.",
     },
-    period: "2024 – Present",
+    role: {
+      en: "Founder & Full-Stack Developer",
+      es: "Fundador y Desarrollador Full-Stack",
+    },
+    period: "2026 – Present",
+    status: {
+      en: "Side Project",
+      es: "Proyecto Propio",
+    },
+    stack: [
+      "Next.js 14",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Clerk",
+      "Anthropic Claude API",
+      "Cloudinary",
+      "Recharts",
+      "Lemon Squeezy",
+      "Vercel",
+      "Supabase",
+    ],
+    achievements: {
+      en: [
+        "Designed and built a full SaaS product solo — from architecture and database schema to UI and payment integration.",
+        "Dropshippers generate AI-powered landing pages in minutes, with built-in visitor tracking and automatic optimization suggestions via Claude API.",
+        "Implemented append-only versioning so every iteration of a landing page is preserved — full history, zero data loss.",
+        "Built lightweight fire-and-forget behavioral tracking that never blocks page load on the public-facing landing.",
+        "Chose Lemon Squeezy as Merchant of Record over Stripe to handle global tax compliance and LATAM payment restrictions.",
+      ],
+      es: [
+        "Diseñé y construí un producto SaaS completo solo — desde la arquitectura y el esquema de base de datos hasta la UI e integración de pagos.",
+        "Los dropshippers generan landing pages potenciadas por IA en minutos, con tracking de visitantes integrado y sugerencias de optimización automáticas via Claude API.",
+        "Implementé versionado append-only para que cada iteración de una landing page quede preservada — historial completo, cero pérdida de datos.",
+        "Construí un sistema de tracking de comportamiento ligero fire-and-forget que nunca bloquea la carga de la página pública.",
+        "Elegí Lemon Squeezy como Merchant of Record sobre Stripe para manejar compliance fiscal global y restricciones de pago en LATAM.",
+      ],
+    },
+  },
+  {
+    id: 1,
+    company: "Growtek AI Solutions",
+    url: "https://growtek.co/",
+    highlight: {
+      en: "Building AI-native products — from system design to production.",
+      es: "Construyendo productos nativos de IA — desde el diseño del sistema hasta producción.",
+    },
+    role: {
+      en: "Freelance Full-Stack Developer",
+      es: "Desarrollador Full-Stack Freelance",
+    },
+    period: "2026 – Present",
     status: {
       en: "Freelance",
       es: "Freelance",
@@ -27,30 +81,33 @@ export const experience: Experience[] = [
       "React",
       "Next.js",
       "TypeScript",
-      "Python",
-      "Supabase",
+      "Node.js",
       "PostgreSQL",
-      "OpenAI",
       "Docker",
     ],
     achievements: {
       en: [
-        "Developing custom web applications for startups and small businesses.",
-        "Building AI-powered tools, automation workflows, and SaaS prototypes.",
-        "Working with modern stacks such as React, Next.js, TypeScript, and Python.",
-        "Integrating APIs, LLM services, and scalable backend architectures.",
+        "Build and maintain scalable end-to-end systems using React, Next.js, and Node.js.",
+        "Integrate AI capabilities into real-world products through APIs, automation, and intelligent features.",
+        "Contribute to system design and architecture decisions for client projects.",
+        "Improve development workflows by leveraging AI tools across the full stack.",
       ],
       es: [
-        "Desarrollo de aplicaciones web a medida para startups y pequeñas empresas.",
-        "Construcción de herramientas con IA, flujos de automatización y prototipos SaaS.",
-        "Trabajo con stacks modernos como React, Next.js, TypeScript y Python.",
-        "Integración de APIs, servicios LLM y arquitecturas backend escalables.",
+        "Construcción y mantenimiento de sistemas escalables de extremo a extremo con React, Next.js y Node.js.",
+        "Integración de capacidades de IA en productos reales mediante APIs, automatización y funcionalidades inteligentes.",
+        "Contribución al diseño de sistemas y decisiones de arquitectura en proyectos de clientes.",
+        "Mejora de flujos de desarrollo aprovechando herramientas de IA en todo el stack.",
       ],
     },
   },
   {
     id: 3,
     company: "Enersinc SAS",
+    url: "https://enersinc.com/",
+    highlight: {
+      en: "4 years shipping AI-powered features for enterprise energy platforms.",
+      es: "4 años entregando funcionalidades de IA en plataformas energéticas empresariales.",
+    },
     role: {
       en: "Software Developer",
       es: "Desarrollador de Software",
@@ -89,6 +146,11 @@ export const experience: Experience[] = [
   {
     id: 4,
     company: "Guepardos",
+    url: "https://guepardos.co/",
+    highlight: {
+      en: "End-to-end logistics platform — from Figma to production in one engagement.",
+      es: "Plataforma logística de extremo a extremo — de Figma a producción en un solo proyecto.",
+    },
     role: {
       en: "Full-Stack Developer",
       es: "Desarrollador Full-Stack",

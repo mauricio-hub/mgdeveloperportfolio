@@ -4,6 +4,7 @@ export interface Exercise {
   id: number;
   title: string;
   description: Record<Lang, string>;
+  technicalNotes?: Record<Lang, string[]>;
   stack: string[];
   images: string[];
   liveUrl?: string;
@@ -11,6 +12,28 @@ export interface Exercise {
 }
 
 export const exercises: Exercise[] = [
+  {
+    id: 4,
+    title: "PDF Chat",
+    description: {
+      en: "AI-powered tool that lets property managers query lease contracts instantly — no manual searching required. Built on a RAG pipeline with vector search over PDF documents.",
+      es: "Herramienta con IA que permite a administradores de propiedades consultar contratos de arrendamiento al instante. Construida sobre un pipeline RAG con búsqueda vectorial sobre documentos PDF.",
+    },
+    stack: [
+      "Python",
+      "LangChain",
+      "OpenAI",
+      "FAISS",
+      "FastAPI",
+      "React",
+      "TypeScript",
+    ],
+    images: [
+      "/images/rag/ChatGPT Image Mar 3, 2026, 08_26_59 PM.png",
+      "/images/rag/WhatsApp Image 2026-03-03 at 8.21.49 PM.jpeg",
+      "/images/rag/WhatsApp Image 2026-03-03 at 8.23.55 PM.jpeg",
+    ],
+  },
   {
     id: 1,
     title: "NexoraLabs",

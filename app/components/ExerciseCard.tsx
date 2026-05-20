@@ -53,6 +53,17 @@ export default function ExerciseCard({ exercise }: ExerciseCardProps) {
           {exercise.description[lang]}
         </p>
 
+        {/* Technical decisions */}
+        {exercise.technicalNotes && exercise.technicalNotes[lang].length > 0 && (
+          <ul className="flex flex-col gap-2 border-l-2 border-accent pl-4">
+            {exercise.technicalNotes[lang].map((note, i) => (
+              <li key={i} className="text-xs leading-relaxed text-text-secondary">
+                {note}
+              </li>
+            ))}
+          </ul>
+        )}
+
         {/* Stack badges */}
         <div className="mt-auto flex flex-wrap gap-2 pt-2">
           {exercise.stack.map((tech) => (

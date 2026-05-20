@@ -9,9 +9,10 @@ const EASE = [0.25, 0.1, 0.25, 1.0] as const;
 interface ImageSliderProps {
   images: string[];
   alt: string;
+  fill?: boolean;
 }
 
-export default function ImageSlider({ images, alt }: ImageSliderProps) {
+export default function ImageSlider({ images, alt, fill: fillMode }: ImageSliderProps) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
 
@@ -36,7 +37,7 @@ export default function ImageSlider({ images, alt }: ImageSliderProps) {
 
   if (images.length === 0) {
     return (
-      <div className="flex aspect-[16/10] items-center justify-center bg-bg-secondary">
+      <div className={`flex items-center justify-center bg-bg-secondary ${fillMode ? "h-full" : "aspect-[16/10]"}`}>
         <span className="font-mono text-xs text-text-secondary/40">
           No images
         </span>
@@ -45,7 +46,7 @@ export default function ImageSlider({ images, alt }: ImageSliderProps) {
   }
 
   return (
-    <div className="group relative aspect-[16/10] overflow-hidden bg-bg-secondary">
+    <div className={`group relative overflow-hidden bg-bg-secondary ${fillMode ? "aspect-[4/3] w-full" : "aspect-[16/10]"}`}>
       {/* Slides */}
       <AnimatePresence initial={false} custom={direction} mode="popLayout">
         <motion.div

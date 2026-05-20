@@ -22,25 +22,100 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mauricio González – Full-Stack Developer",
+  title: "Mauricio González – Full-Stack Developer & AI Integration",
   description:
-    "Full-stack developer with 5+ years of experience building enterprise web applications. React, TypeScript, Python, Django.",
+    "Full-Stack Developer with 5+ years building scalable, AI-powered web applications. Expert in React, Next.js, TypeScript, Node.js, Python and Django. Available for freelance projects.",
   keywords: [
+    // Name & identity
+    "Mauricio González",
+    "Mauricio Gonzalez developer",
+    "bymauriciog",
+    // Roles (EN)
     "Full-Stack Developer",
+    "Full Stack Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Software Engineer",
+    "Web Developer",
+    "Freelance Developer",
+    "Freelance Programmer",
+    "AI Developer",
+    "AI Integration Developer",
+    "SaaS Developer",
+    // Roles (ES)
+    "Desarrollador Full Stack",
+    "Desarrollador Web",
+    "Programador Freelance",
+    "Desarrollador Freelance",
+    "Programador Web",
+    "Ingeniero de Software",
+    // Technologies
     "React",
+    "Next.js",
     "TypeScript",
+    "JavaScript",
+    "Node.js",
     "Python",
     "Django",
-    "Portfolio",
-    "Mauricio González",
+    "PostgreSQL",
+    "REST API",
+    "Docker",
+    "Redux",
+    "Tailwind CSS",
+    "Framer Motion",
+    "OpenAI",
+    "Claude API",
+    "Anthropic",
+    "LangChain",
+    "Supabase",
+    "Prisma",
+    // Location & context
+    "Colombia",
+    "Remote Developer",
+    "Remote Programmer",
+    "Desarrollador Colombia",
+    "Desarrollador Remoto",
+    "LATAM Developer",
+    // Services
+    "hire developer",
+    "contratar programador",
+    "contratar desarrollador",
+    "freelance web development",
+    "custom web application",
+    "aplicaciones web a medida",
+    "portfolio developer",
   ],
   authors: [{ name: "Mauricio González" }],
+  creator: "Mauricio González",
+  metadataBase: new URL("https://bymauriciog.com"),
+  alternates: {
+    canonical: "https://bymauriciog.com",
+  },
   openGraph: {
-    title: "Mauricio González – Full-Stack Developer",
+    title: "Mauricio González – Full-Stack Developer & AI Integration",
     description:
-      "Full-stack developer with 5+ years of experience building enterprise web applications.",
+      "Full-Stack Developer with 5+ years building scalable, AI-powered web applications. React, Next.js, TypeScript, Node.js, Python. Available for freelance.",
     type: "website",
     locale: "en_US",
+    url: "https://bymauriciog.com",
+    siteName: "Mauricio González – Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mauricio González – Full-Stack Developer & AI Integration",
+    description:
+      "Full-Stack Developer with 5+ years building scalable, AI-powered web applications. React, Next.js, TypeScript, Node.js, Python.",
+    creator: "@mauriciog",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    },
   },
 };
 
@@ -53,6 +128,48 @@ export default function RootLayout({
     <html lang="en" translate="no" suppressHydrationWarning>
       <head>
         <meta name="google" content="notranslate" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Mauricio González",
+              url: "https://bymauriciog.com",
+              email: "mauriciogonzalezdeveloper@gmail.com",
+              jobTitle: "Full-Stack Developer & AI Integration",
+              description:
+                "Full-Stack Engineer with 5 years of experience building scalable, AI-powered applications. Expert in React, Next.js, TypeScript, Node.js, and Python.",
+              sameAs: [
+                "https://www.linkedin.com/in/mauricio-gonzalez-frontend-developer/",
+                "https://github.com/mauricio-hub",
+              ],
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "CO",
+              },
+              knowsAbout: [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "Node.js",
+                "Python",
+                "Django",
+                "PostgreSQL",
+                "Docker",
+                "AI Integration",
+                "REST APIs",
+                "Full-Stack Development",
+                "SaaS Development",
+              ],
+              offers: {
+                "@type": "Offer",
+                description:
+                  "Freelance full-stack development, AI integration, web application development.",
+              },
+            }),
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

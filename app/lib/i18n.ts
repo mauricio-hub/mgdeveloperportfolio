@@ -14,7 +14,7 @@ const translations = {
       title: "BUILDING",
       subtitle: "PRODUCTS.",
       summary:
-        "I turn complex problems into clean, functional software. 5+ years shipping full-stack products — from energy platforms to real-time systems. React, TypeScript, Python, Django.",
+        "Full-Stack Engineer with 5 years of experience building scalable, AI-powered applications. React, Next.js, TypeScript, Node.js, Python — leveraging AI to ship faster.",
       cta1: "View Projects",
       cta2: "Let's Talk",
     },
@@ -22,8 +22,8 @@ const translations = {
       marquee: "ABOUT ME",
       title: "ABOUT",
       subtitle: "ME",
-      p1: "I'm a full-stack developer who builds enterprise web applications that solve real problems. Over the past 5+ years, I've focused on the energy sector — creating platforms with AI-powered analytics, real-time data processing, and scalable architectures.",
-      p2: "I work across the entire stack: from designing clean, intuitive interfaces with React and TypeScript, to building robust APIs with Python and Django. I care about writing maintainable code, thinking about UX from the start, and shipping features that actually matter to users.",
+      p1: "I'm a Full-Stack Engineer with 5 years of experience building scalable, AI-powered applications. I've worked across industries — energy, logistics, and SaaS — integrating AI capabilities into real products through APIs, automation, and intelligent features.",
+      p2: "I work across the full stack: clean, intuitive interfaces with React and Next.js on the front, robust APIs with Python, Django, and Node.js on the back. I leverage AI tools to accelerate development, optimize workflows, and deliver high-quality products faster.",
     },
     experience: {
       marquee: "EXPERIENCE",
@@ -90,7 +90,7 @@ const translations = {
       title: "CONSTRUYO",
       subtitle: "PRODUCTOS.",
       summary:
-        "Convierto problemas complejos en software limpio y funcional. 5+ años entregando productos full-stack — desde plataformas energéticas hasta sistemas en tiempo real. React, TypeScript, Python, Django.",
+        "Ingeniero Full-Stack con 5 años construyendo aplicaciones escalables potenciadas por IA. React, Next.js, TypeScript, Node.js, Python — usando IA para entregar más rápido.",
       cta1: "Ver Proyectos",
       cta2: "Hablemos",
     },
@@ -98,8 +98,8 @@ const translations = {
       marquee: "ABOUT ME",
       title: "ABOUT",
       subtitle: "ME",
-      p1: "Soy un desarrollador full-stack que construye aplicaciones web empresariales que resuelven problemas reales. Durante más de 4 años, me he enfocado en el sector energético — creando plataformas con analítica potenciada por IA, procesamiento de datos en tiempo real y arquitecturas escalables.",
-      p2: "Trabajo en todo el stack: desde diseñar interfaces limpias e intuitivas con React y TypeScript, hasta construir APIs robustas con Python y Django. Me importa escribir código mantenible, pensar en UX desde el inicio y entregar funcionalidades que realmente importen a los usuarios.",
+      p1: "Soy un Ingeniero Full-Stack con 5 años de experiencia construyendo aplicaciones escalables potenciadas por IA. He trabajado en distintas industrias — energía, logística y SaaS — integrando capacidades de IA en productos reales a través de APIs, automatización y funcionalidades inteligentes.",
+      p2: "Trabajo en todo el stack: interfaces limpias e intuitivas con React y Next.js en el front, APIs robustas con Python, Django y Node.js en el back. Aprovecho herramientas de IA para acelerar el desarrollo, optimizar flujos de trabajo y entregar productos de calidad más rápido.",
     },
     experience: {
       marquee: "EXPERIENCE",
