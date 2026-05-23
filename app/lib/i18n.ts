@@ -69,7 +69,8 @@ const translations = {
     contact: {
       title: "CONTACT",
       subtitle: "ME",
-      cta: "Download CV →",
+      description: "Open to freelance projects and full-time opportunities. The best way to reach me is through LinkedIn.",
+      cta: "Message me on LinkedIn →",
       links: "Links",
       info: "Info",
     },
@@ -145,7 +146,8 @@ const translations = {
     contact: {
       title: "CONTACT",
       subtitle: "ME",
-      cta: "Descargar CV →",
+      description: "Abierto a proyectos freelance y oportunidades de tiempo completo. La mejor forma de contactarme es por LinkedIn.",
+      cta: "Escríbeme en LinkedIn →",
       links: "Enlaces",
       info: "Información",
     },
