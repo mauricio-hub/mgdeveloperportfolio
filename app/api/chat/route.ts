@@ -150,7 +150,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid request" }, { status: 400 });
     }
 
-    let agentMessages: Anthropic.MessageParam[] = [...messages];
+    const agentMessages: Anthropic.MessageParam[] = [...messages];
 
     // Agentic loop: keep running until Claude stops calling tools
     while (true) {
