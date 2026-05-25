@@ -102,7 +102,7 @@ export default function AgentChat() {
             exit={{ opacity: 0, y: 16, scale: 0.95 }}
             transition={{ duration: 0.35, ease: EASE }}
             className="w-[340px] sm:w-[380px] rounded-2xl shadow-2xl overflow-hidden flex flex-col"
-            style={{ background: "var(--bg-card)", border: "1px solid var(--border)", maxHeight: "520px" }}
+            style={{ background: "var(--bg-primary)", border: "1px solid var(--border)", maxHeight: "520px" }}
           >
             <ChatHeader onClose={() => setOpen(false)} />
 

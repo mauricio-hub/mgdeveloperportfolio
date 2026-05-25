@@ -34,7 +34,7 @@ export default function ChatHeader({ onClose }: Props) {
               <path d="M9 16v2h6v-2"/>
             </svg>
           </div>
-          <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-green-500 border-2 border-[var(--bg-card)]" />
+          <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-green-500 border-2 border-[var(--bg-primary)]" />
         </div>
         <div>
           <p className="text-xs font-semibold leading-none" style={{ color: "var(--text-primary)" }}>

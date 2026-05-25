@@ -19,7 +19,7 @@ export default function ProactiveBubble({ text, hint, onOpen, onDismiss }: Props
       transition={{ duration: 0.4, ease: EASE }}
       onClick={onOpen}
       className="relative max-w-[220px] rounded-2xl rounded-br-sm px-4 py-3 shadow-lg cursor-pointer"
-      style={{ background: "var(--bg-card)", border: "1px solid var(--border)", color: "var(--text-primary)" }}
+      style={{ background: "var(--bg-primary)", border: "1px solid var(--border)", color: "var(--text-primary)" }}
     >
       <button
         onClick={onDismiss}
