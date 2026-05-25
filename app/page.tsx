@@ -9,6 +9,8 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import AgentChat from "./components/AgentChat";
+import AgentDocs from "./components/AgentDocs";
 
 export default function Home() {
   const { t } = useLang();
@@ -24,9 +26,12 @@ export default function Home() {
         <Experience />
         <Marquee text={t.skills.marquee} />
         <Skills />
+        <Marquee text="AI AGENT" />
+        <AgentDocs />
         <Contact />
       </main>
       <Footer />
+      <AgentChat />
     </>
   );
 }
