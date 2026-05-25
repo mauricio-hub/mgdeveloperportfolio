@@ -36,9 +36,7 @@ export default function ChatInput({ value, placeholder, sendLabel, loading, onCh
         </button>
       </form>
 
-      <p className="text-center text-[10px] mt-2" style={{ color: "var(--text-secondary)" }}>
-        AI Agent · Anthropic Claude API
-      </p>
+
     </div>
   );
 }
